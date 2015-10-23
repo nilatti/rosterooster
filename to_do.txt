@@ -1,0 +1,5 @@
+do next:
+
+Create people from new groups form
+Set up steps for each person in group
+Write tests for creating event, meal, lodgings, tasks, items, organizations, gatherings

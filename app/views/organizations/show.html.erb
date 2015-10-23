@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @organization.name %>
+</p>
+
+<p>
+	<strong>Events:</strong>
+	<ul>
+	<% @organization.events.each do |event| %>
+	  <li><%= link_to "#{event.name}", event %> <%= link_to "Edit", edit_event_path(event) %></li>
+	<% end %>
+    </ul>
+<%= link_to 'Edit', edit_organization_path(@organization) %> |
+<%= link_to 'Back', organizations_path %> | 
+<%= link_to 'Add New Event', new_organization_event_path(@organization) %>

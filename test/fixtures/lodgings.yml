@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  max_males: 1
+  max_females: 1
+  max_neutral: 1
+  event_id: 1
+  registration_id: 1
+
+two:
+  name: MyString
+  location: MyString
+  max_males: 1
+  max_females: 1
+  max_neutral: 1
+  event_id: 1
+  registration_id: 1

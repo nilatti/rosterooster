@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gathering:</strong>
+  <%= @signup.gathering_id %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @signup.person_id %>
+</p>
+
+<p>
+  <strong>Registration:</strong>
+  <%= @signup.registration_id %>
+</p>
+
+<%= link_to 'Edit', edit_signup_path(@signup) %> |
+<%= link_to 'Back', signups_path %>

@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= link_to "#{@event.organization.name}", @event.organization %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @event.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @event.end %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+<p>
+  <strong>Registrations:</strong>
+  <% @event.registrations.each do |registration| %>
+    <%= registration.person.first_name %>
+  <% end %>
+  <%= link_to "Register for #{@event.name}", new_event_group_path(@event) %>
+</p>
+<p>
+  <strong>Lodgings:</strong>
+  <ul>
+  <% @event.lodgings.each do |lodging| %>
+    <li><%= link_to "#{lodging.name}", lodging %></li>
+  <% end %>
+  </ul>
+  <%= link_to 'Add New Lodgings', new_event_lodging_path(@event) %>
+</p>
+
+<p>
+  <strong>Classes/Sessions:</strong>
+  <ul>
+  <% @event.gatherings.each do |gathering| %>
+    <li><%= link_to "#{gathering.name}", gathering %> from <%= gathering.start %> - <%= gathering.end %> at <%= gathering.location %></li>
+  <% end %>
+  </ul>
+  <%= link_to 'Add New Class/Session', new_event_gathering_path(@event) %>
+</p>
+
+<p>
+  <strong>Meals:</strong>
+  <ul>
+  <% @event.meals.each do |meal| %>
+    <li><%= link_to "#{meal.name}", meal %> from <%= meal.start %> - <%= meal.end %></li>
+  <% end %>
+  </ul>
+  <%= link_to 'Add New Meal', new_event_meal_path(@event) %>
+</p>
+
+<p>
+  <strong>Items to bring:</strong><br />
+  <em>Usually, this means items people will bring to contribute to the group event, e.g. a box of crayons for a class or a gallon of milk for breakfast.</em>
+  <ul>
+  <% @event.items.each do |item| %>
+    <li><%= link_to "#{item.name}", item %> Number requested: <%= item.number %></li>
+  <% end %>
+  </ul>
+  <%= link_to 'Add New Item', new_event_item_path(@event) %>
+</p>
+
+<p>
+  <strong>Volunteer Tasks:</strong>
+  <ul>
+  <% @event.tasks.each do |task| %>
+    <li><%= link_to "#{task.name}", task %> Number requested: <%= task.number %></li>
+  <% end %>
+  </ul>
+  <%= link_to 'Add New Task', new_event_task_path(@event) %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', organization_path(@event.organization_id) %>

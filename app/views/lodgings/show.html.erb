@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lodging.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @lodging.location %>
+</p>
+
+<p>
+  <strong>Max males:</strong>
+  <%= @lodging.max_males %>
+</p>
+
+<p>
+  <strong>Max females:</strong>
+  <%= @lodging.max_females %>
+</p>
+
+<p>
+  <strong>Max neutral:</strong>
+  <%= @lodging.max_neutral %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @lodging.event_id %>
+</p>
+
+<%= link_to 'Edit', edit_lodging_path(@lodging) %> |
+<%= link_to 'Back', @lodging.event %>

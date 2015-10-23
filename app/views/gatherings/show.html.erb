@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @gathering.location %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @gathering.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @gathering.end %>
+</p>
+
+<p>
+  <strong>Leader:</strong>
+  <%= @gathering.leader %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gathering.name %>
+</p>
+
+<%= link_to 'Edit', edit_gathering_path(@gathering) %> |
+<%= link_to 'Back', event_path(@gathering.event) %>

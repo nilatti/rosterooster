@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group_id: 1
+  event_id: 1
+  accommodation_id: 1
+  person_id: 1
+  paid: false
+  organization_id: 1
+
+two:
+  group_id: 1
+  event_id: 1
+  accommodation_id: 1
+  person_id: 1
+  paid: false
+  organization_id: 1

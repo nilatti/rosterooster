@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gathering_id: 1
+  person_id: 1
+  registration_id: 1
+
+two:
+  gathering_id: 1
+  person_id: 1
+  registration_id: 1

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @registration.group_id %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @registration.event_id %>
+</p>
+
+<p>
+  <strong>Accommodation:</strong>
+  <%= @registration.accommodation_id %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @registration.person_id %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @registration.paid %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @registration.organization_id %>
+</p>
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'Back', @event %>

@@ -1,0 +1,24 @@
+<%= semantic_form_for [@event, @gathering] do |f| %>
+  <% if @gathering.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gathering.errors.count, "error") %> prohibited this gathering from being saved:</h2>
+
+      <ul>
+      <% @gathering.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :leader %>
+    <%= f.input :location %>
+    <%= f.input :start %>
+    <%= f.input :end %>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
